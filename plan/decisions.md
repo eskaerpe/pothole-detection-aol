@@ -19,3 +19,6 @@ For each later decision record ID, owning phase, owner approval evidence/date, a
 
 ## Pretrained-first baseline
 Owner approved downloading and adapting an existing pothole model. Selected PeterHdd as the first evaluable candidate because weights, ONNX export, training-source reference and companion code are accessible. No measured superiority is claimed. Files are pinned in models/pothole-baseline.json. Training is optional, subject to pilot failures and approval. License compatibility and independent footage performance remain unresolved gates.
+
+## Early pilot scheduling and scope
+Documentation alignment adopts pretrained-first sequencing: P01 → P02 → P08 → P03–P07 → P09 → P10. Keep original phase IDs and pending gates. Phone forward-facing walking footage is primary; dashcam is evaluated separately. Dataset work first supplies independent evaluation videos and labels; optional fine-tuning requires evidence and permission. The detector is reused, while the two-POV web application still needs implementation. No implementation/runtime approval is implied by this documentation change.

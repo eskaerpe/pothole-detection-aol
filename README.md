@@ -22,3 +22,6 @@ Every verified revision gets a focused commit; every completed phase gets a clos
 
 ## Downloaded pretrained candidate
 PeterHdd YOLOv8s pothole weights are available locally in `weights/peterhdd/` (PT and ONNX), excluded from Git. See [manifest](models/pothole-baseline.json) for pinned revision/checksums and [AI policy](docs/ai-and-dataset.md) for the evaluation gate. Downloaded does not mean inference-tested. No training required before a pretrained pilot.
+
+## Current execution strategy
+Reuse the downloaded detector weights; do not train first or copy an entire upstream application. The application itself remains to be implemented. Execute P01 → P02 → P08 before the UI/backend phases, preserving existing phase IDs. See [phase index](plan/README.md). Model suitability, runtime compatibility and license compatibility are still unverified.

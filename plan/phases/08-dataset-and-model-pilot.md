@@ -1,4 +1,4 @@
-# P08 — Dataset validation and real model pilot
+# P08 — Pretrained baseline and independent-video pilot
 
 ## Status and entry gate
 - Status: pending
@@ -11,9 +11,9 @@
 Complete the bounded tasks below without unrelated features. Required external inputs/permissions are entry gates; missing evidence is a blocker, not permission to simulate success.
 
 ## Tasks
-- [ ] P08-T01: Receive versioned traceable data and run annotation/provenance/duplicate/grouped-split validation.
-- [ ] P08-T02: Approve license, model/weights and measurable pilot criteria before an authorized pretrained inference pilot; fine-tuning requires separate approval only if needed.
-- [ ] P08-T03: Evaluate a real pothole model on independent authorized full videos and report concrete failures.
+- [ ] P08-T01 — Verify the pinned artifact hashes, declared class mapping and library/weights/data licenses; validate independent evaluation-video provenance and annotation format. Do not execute an untrusted PT checkpoint merely to inspect it.
+- [ ] P08-T02 — Obtain bounded runtime/dependency and input permissions, then run the pretrained candidate on approved forward-facing walking footage; evaluate dashcam separately. GPU use always requires explicit permission. Record environment, parameters, frame/timestamp mapping and actual latency.
+- [ ] P08-T03 — Evaluate against labeled independent frames and agreed acceptance limits; freeze threshold settings before held-out testing. Record missed potholes, shadows/patch false positives and sampling limitations. Decide accept, compare another pretrained model, or propose optional fine-tuning; report tested results only.
 
 ## Acceptance gate
 - [ ] Dataset/model/license/split/run configurations are recorded; test data is excluded from tuning.
@@ -37,3 +37,6 @@ No phase implementation defects have been assessed yet. For each defect record I
 - Push: not attempted; record actual outcome after gate validation.
 - Remote SHA verification: not run. Give final local/remote SHA in the post-commit report; do not embed this commit's own SHA in itself.
 - Handoff: update phase index and affected specifications, list unresolved restrictions; start next phase only after gate and verified push or explicit owner waiver.
+
+## Position and exit decision
+Execute after P02 and before P03 by default; retain P08 IDs for traceability. Download preparation is recorded but none of the above tasks is complete. Full application integration belongs to P09. A failed model gate pauses default progression until the owner accepts a remediation or an explicit exception.

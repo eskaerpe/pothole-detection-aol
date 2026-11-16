@@ -78,3 +78,6 @@ These routing instructions apply to every delegated implementer/reviewer. Pass t
 
 ## Pretrained baseline policy
 Evaluate the pinned PeterHdd candidate before training. Read [AI contract](docs/ai-and-dataset.md) and [artifact manifest](models/pothole-baseline.json). Verify checksums before loading; never treat download success as model suitability. Keep binary weights excluded from Git. No automatic training, checkpoint execution or GPU use. Fine-tune only after documented pilot failures and approval.
+
+## Pretrained-first sequencing and boundaries
+Current approval is documentation alignment and ordinary commit/push only, not execution of the next implementation phase. Default order is P01 → P02 → P08 → P03 → P04 → P05 → P06 → P07 → P09 → P10. Preserve IDs and defect history. Reuse pinned weights, not assumed upstream application functionality. Prioritize independent walking-video evaluation; dashcam is a separate scenario. Do not request a large training dataset as a prerequisite or begin training automatically. Before P08 execution, resolve runtime/resource permissions and agreed acceptance criteria. Downloaded artifacts do not complete P08.

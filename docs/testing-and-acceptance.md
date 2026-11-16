@@ -25,3 +25,6 @@ Use actual rendered checks for UI; Antislop skill availability is not proof of c
 
 ## Final demonstration
 Use an authorized positive and negative video, public receipt, admin selection/start, progress, result evidence and human review. Demonstrate a controlled failure/retry. Record real observed output; do not script fake success. Owner reviews the final limitations and handoff instructions.
+
+## Early pretrained gate
+Run P08 after P02 and before default web implementation. Evaluate pinned pretrained weights on independent walking footage first, dashcam separately; agree limits before the run and record real detections, misses, false positives and latency. Download success is not inference success. Training is optional remediation, never a mandatory readiness gate.

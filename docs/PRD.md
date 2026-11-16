@@ -17,7 +17,7 @@ Untuk AI image generator: baca ringkasan, alur operasional, serta bagian **PROMP
 - **Ditetapkan pengguna:** dua POV; masyarakat mengunggah video; admin memproses secara batch berkala; skala kecil; akurasi tidak harus sempurna.
 - **Baseline desain hasil review:** batch dimulai manual, hasil diverifikasi admin, tidak ada inferensi saat upload, tidak ada counter lubang unik pada MVP.
 - **Rekomendasi teknis:** stack dan batas upload di dokumen ini adalah baseline usulan untuk implementasi; belum diuji atau dikonfirmasi sebagai pilihan framework pengguna.
-- **Belum diverifikasi:** bobot model, dataset/lisensi spesifik, hardware, waktu proses, biaya, deployment, rubrik dan deadline resmi mata kuliah.
+- **Belum diverifikasi:** kompatibilitas runtime dan performa bobot yang sudah diunduh, dataset/lisensi spesifik, hardware, waktu proses, biaya, deployment, rubrik dan deadline resmi mata kuliah.
 
 ### Ringkasan satu paragraf
 
@@ -263,3 +263,6 @@ Jika generator kesulitan merender teks, utamakan struktur diagram dan sisakan la
 - Ultralytics predict, input video dan konfigurasi inferensi: https://docs.ultralytics.com/modes/predict/
 
 Referensi mendukung mekanisme teknis; tidak membuktikan akurasi pothole, keamanan aplikasi ini, atau performa perangkat pengguna.
+
+## Keputusan baseline pretrained
+Detector awal menggunakan kandidat PeterHdd yang dipin di [manifest](../models/pothole-baseline.json), bukan training dari nol. Weights sudah diunduh, tetapi belum dijalankan atau dinyatakan cocok. [Kontrak AI](ai-and-dataset.md) mengatur evaluasi independen, lisensi dan fallback. Web, upload, worker dan human review tetap dikembangkan sesuai PRD; source project upstream hanya referensi, bukan aplikasi yang sudah diadopsi.

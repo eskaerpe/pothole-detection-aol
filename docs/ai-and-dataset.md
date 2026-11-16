@@ -1,7 +1,7 @@
 # AI and dataset contract
 
 ## Responsibilities and early handoff
-Dataset contributor provides small labeled samples early, then versioned releases. Implementer validates technical compatibility and returns concrete failures; contributor supplements data while the application proceeds independently.
+Dataset contributor first provides independent forward-facing videos and a small labeled evaluation-frame set with versioned provenance. Implementer evaluates the downloaded pretrained candidate and reports concrete failures. Collect optional fine-tuning data only when the pilot identifies a need; do not wait for a large training dataset to begin evaluation.
 
 Each handoff includes source URLs, license/usage constraints, version, class mapping, annotation format, image/label pairs, source-video/trip grouping, split manifest, negative examples, separate full test videos and known quality limitations. Preserve raw originals separately; never silently modify a dataset used in a run.
 
@@ -25,3 +25,10 @@ Use `peterhdd/pothole-detection-yolov8` as the first candidate, not a proven bes
 Evaluate existing pothole weights before considering training. Fine-tuning is conditional on concrete failures and separate approval, not an acceptance prerequisite. Use independent forward-facing walking footage as the primary scenario and dashcam footage as a separate scenario. Training frames and evaluation videos must remain independent. Library, weights and training-data licensing remain a review gate; an Apache-2.0 model-card declaration alone does not clear all dependencies.
 
 No dependencies installed or inference/GPU run is implied by this download. Do not load an untrusted PyTorch checkpoint outside an isolated, approved environment. Prefer inspecting ONNX metadata and validating source/checksum before runtime adoption. Model outputs need the existing detector contract and human review; no automatic unique-pothole count.
+
+## Target capture and evaluation protocol
+Primary target: phone footage facing forward while walking, with road surface and approaching potholes visible. Dashcam footage is a distinct secondary scenario; do not pool results to imply equal performance. This is recorded-video upload and manual batch processing, not live inference.
+
+Before the pilot, agree evaluation labels, inclusion rules and tolerable missed detections/false positives with the owner. Use an evaluation frame set for boxes and separate video checks for motion, blur, sampling and timestamps. Log predictions against labels, confidence settings, precision/recall and appropriate detection metrics when supported; report scenario-specific failures and actual CPU/GPU timing without fabricated targets. Tune thresholds only on a development subset, freeze settings, then evaluate held-out footage. Record possible overlap with the upstream training data; unknown overlap must be disclosed.
+
+Pilot outcomes: accept baseline within agreed limits; evaluate an alternative pretrained candidate; or request bounded fine-tuning. Failure does not automatically authorize training or a GPU run. Downloaded PT/ONNX files have not yet passed load, parity or performance tests; neither runtime format is final.

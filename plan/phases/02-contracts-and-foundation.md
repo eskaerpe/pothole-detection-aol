@@ -37,3 +37,6 @@ No phase implementation defects have been assessed yet. For each defect record I
 - Push: not attempted; record actual outcome after gate validation.
 - Remote SHA verification: not run. Give final local/remote SHA in the post-commit report; do not embed this commit's own SHA in itself.
 - Handoff: update phase index and affected specifications, list unresolved restrictions; start next phase only after gate and verified push or explicit owner waiver.
+
+## Next checkpoint
+After this gate, execute P08 pretrained pilot before P03 by default. Keep detector interface replaceable across PT/ONNX and do not choose a runtime based on file availability alone.
