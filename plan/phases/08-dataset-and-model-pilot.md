@@ -12,17 +12,17 @@ Complete the bounded tasks below without unrelated features. Required external i
 
 ## Tasks
 - [ ] P08-T01: Receive versioned traceable data and run annotation/provenance/duplicate/grouped-split validation.
-- [ ] P08-T02: Approve license, model/weights and measurable pilot criteria before an authorized smoke training run.
+- [ ] P08-T02: Approve license, model/weights and measurable pilot criteria before an authorized pretrained inference pilot; fine-tuning requires separate approval only if needed.
 - [ ] P08-T03: Evaluate a real pothole model on independent authorized full videos and report concrete failures.
 
 ## Acceptance gate
 - [ ] Dataset/model/license/split/run configurations are recorded; test data is excluded from tuning.
-- [ ] Training and real-video pilot have actual evidence and resource measurements.
+- [ ] Pretrained real-video pilot has actual evidence and resource measurements; fine-tuning is optional.
 - [ ] Owner accepts pilot suitability before phase 09; failure blocks integration, not unrelated app work.
 
 ## Validation and evidence
 - Commands and environment: not run. Record exact reproducible commands after execution.
-- Inputs/artifacts: none inspected for this phase. Record authorized fixture/data identity and sanitized evidence locations.
+- Inputs/artifacts: PeterHdd PT and ONNX downloaded at pinned revision; source and SHA-256 recorded in models/pothole-baseline.json. Runtime loading and independent-video evaluation remain pending.
 - Observed results/exit codes: not run.
 - Remaining limitations/waivers: none approved.
 - Review: not performed.

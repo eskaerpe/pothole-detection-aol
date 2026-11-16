@@ -16,3 +16,6 @@
 
 ## Change record format
 For each later decision record ID, owning phase, owner approval evidence/date, alternatives, chosen option, rationale, affected specs/tests and superseded decision if applicable. Do not invent dates, approvals or benchmarks. Resolve conflicts before changing the implementation contract.
+
+## Pretrained-first baseline
+Owner approved downloading and adapting an existing pothole model. Selected PeterHdd as the first evaluable candidate because weights, ONNX export, training-source reference and companion code are accessible. No measured superiority is claimed. Files are pinned in models/pothole-baseline.json. Training is optional, subject to pilot failures and approval. License compatibility and independent footage performance remain unresolved gates.

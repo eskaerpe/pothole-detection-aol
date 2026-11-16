@@ -1,0 +1,22 @@
+{
+  "repository": "peterhdd/pothole-detection-yolov8",
+  "revision": "da7747eea7abb4319a0f55961f31809a16c1b10a",
+  "selection": "baseline candidate; not performance-validated",
+  "declared_license": "Apache-2.0 (upstream declaration; dependency/dataset review pending)",
+  "files": [
+    {
+      "path": "weights/peterhdd/best.pt",
+      "source": "https://huggingface.co/peterhdd/pothole-detection-yolov8/resolve/da7747eea7abb4319a0f55961f31809a16c1b10a/best.pt",
+      "bytes": 22524266,
+      "sha256": "af2ac6ce7bfec72e71643659ac946caf80ced84869e526a60135c457abfbb200"
+    },
+    {
+      "path": "weights/peterhdd/best.onnx",
+      "source": "https://huggingface.co/peterhdd/pothole-detection-yolov8/resolve/da7747eea7abb4319a0f55961f31809a16c1b10a/best.onnx",
+      "bytes": 44746345,
+      "sha256": "91dd7de7a110c61314ea19a958fcc85c7b3461cc6d60d87fefc08b41ac6e32c5"
+    }
+  ],
+  "inference_tested": false,
+  "gpu_used": false
+}

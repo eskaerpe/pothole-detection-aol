@@ -7,7 +7,7 @@
 4. User instructions take precedence. Surface conflicts before changing behavior; never silently expand scope. PRD proposals are not approved runtime decisions. Record approved changes and update all affected specs and tests together.
 
 ## Scope and product invariants
-- Current approval covers documentation restructuring, its Git commit and push. Application implementation requires approval of a bounded phase/task. Documentation completion does not complete an implementation phase.
+- Current approval additionally covers the selected pretrained baseline download, provenance recording and documentation alignment, with ordinary commit/push. It does not approve installation, training, GPU use or full application implementation. Application implementation requires approval of a bounded phase/task. Documentation completion does not complete an implementation phase.
 - Public video upload creates a report only. No public account, inference on upload, or inference on selection.
 - Authenticated admin explicitly starts a batch from selected reports. One host, one active batch, sequential work in a separate Python worker with a durable queue.
 - Results are suspected findings with timestamp/frame/box/confidence, followed by human review. No detections is not proof of a pothole-free road.
@@ -75,3 +75,6 @@ Apply the core's Delivery Gate to applicable deliverables. Record actual browser
 
 These routing instructions apply to every delegated implementer/reviewer. Pass the relevant skill paths and require each agent to read them; a parent reading a skill does not prove a child loaded it.
 <!-- antislop:end -->
+
+## Pretrained baseline policy
+Evaluate the pinned PeterHdd candidate before training. Read [AI contract](docs/ai-and-dataset.md) and [artifact manifest](models/pothole-baseline.json). Verify checksums before loading; never treat download success as model suitability. Keep binary weights excluded from Git. No automatic training, checkpoint execution or GPU use. Fine-tune only after documented pilot failures and approval.

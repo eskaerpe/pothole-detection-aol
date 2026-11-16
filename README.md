@@ -19,3 +19,6 @@ Project owner approves scope/resources; dataset contributor prepares traceable d
 
 ## Git checkpoints
 Every verified revision gets a focused commit; every completed phase gets a closing checkpoint and verified push. Data, media, weights, databases and secrets stay out of Git. See AGENTS.md for approval boundaries and failure handling. There are no verified application startup/test commands yet; phase 02 must supply them after actual execution.
+
+## Downloaded pretrained candidate
+PeterHdd YOLOv8s pothole weights are available locally in `weights/peterhdd/` (PT and ONNX), excluded from Git. See [manifest](models/pothole-baseline.json) for pinned revision/checksums and [AI policy](docs/ai-and-dataset.md) for the evaluation gate. Downloaded does not mean inference-tested. No training required before a pretrained pilot.
