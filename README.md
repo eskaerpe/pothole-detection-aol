@@ -1,28 +1,21 @@
 # Pothole Inspection AI
 
-University MVP: public video reporting, admin-selected manual AI batches, evidence and human review.
+Small university MVP: public video reports → admin-selected manual AI batch → evidence → human review. No inference on upload or selection.
 
 ## Current state
-Documentation bootstrap only. No app, trained model, runnable commands or benchmark is claimed. `pothole_video.zip` is an existing user artifact; its contents, license and suitability have not been inspected.
+Documentation baseline only; no implementation, trained model, benchmark or security-test result is claimed. The existing `pothole_video.zip` is uninspected and must not be extracted without approval.
 
-## Read these files
-- AGENTS.md: behavior and safety contract for coding agents.
-- docs/PRD.md: complete product/technical concept copied from the final course brief.
-- PLAN.md: phased execution and explicit gates.
-- TASKS.md: acceptance-based work queue.
-- DATASET_CONTRACT.md: dataset contributor/implementer handoff agreement.
+## Start here
+- [AGENTS.md](AGENTS.md): mandatory execution, skill routing and version-control rules.
+- [docs/README.md](docs/README.md): product and technical specifications.
+- [plan/README.md](plan/README.md): phase dependencies and authoritative progress index.
+- [plan/decisions.md](plan/decisions.md): approved choices and unresolved gates.
 
-The PRD's statement that stack selection is provisional remains true. PLAN.md controls execution order while dataset collection is in progress: application foundations may proceed, but final AI integration cannot pass without a real model pilot.
+## Roles
+Project owner approves scope/resources; dataset contributor prepares traceable data; implementer builds/tests the system; reviewer checks evidence independently. One writer per working tree. OMP (Oh My Pi), OpenCode and Hermes are distinct tools; this repository does not require a particular harness.
 
-## Recommended agent arrangement
-The project owner owns scope and approvals. One implementer (OpenCode/OMP, Codex or Hermes) owns each approved task. Hermes can coordinate and independently review. Do not launch multiple writers in the same working tree. No agent-specific plugin/config is required by this repository.
+## First implementation prompt
+> Read AGENTS.md and plan/README.md, then phase 01 and linked specifications. Inspect the live repository without changing artifacts. Propose P01 scope, environment checks and acceptance evidence; wait for approval before implementation, installation, archive extraction or training. Do not skip phases or mark documentation as application completion.
 
-## Starter prompt
-> Read AGENTS.md, README.md, PLAN.md, TASKS.md and DATASET_CONTRACT.md, then relevant sections of docs/PRD.md. Inspect current state without modifying user artifacts. Propose T01 only, list commands, dependencies and acceptance checks, and wait for approval. Do not install, extract archives, train or implement other tasks.
-
-## Responsibilities
-dataset contributor: source/license tracking, annotations, provenance, data preparation and independent test video collection.
-implementer: system architecture, data validation, training pipeline, evaluation, detector, web and integration.
-
-No setup/run command is documented until it actually exists and has been exercised.
-"# pothole-detection-aol" 
+## Git checkpoints
+Every verified revision gets a focused commit; every completed phase gets a closing checkpoint and verified push. Data, media, weights, databases and secrets stay out of Git. See AGENTS.md for approval boundaries and failure handling. There are no verified application startup/test commands yet; phase 02 must supply them after actual execution.
