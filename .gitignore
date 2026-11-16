@@ -32,6 +32,9 @@ weights/
 runs/
 datasets/
 data/
+/dataset_1/
+/dataset_2/
+/dataset_3/
 
 # ==========================================
 # Local Storage, Uploads & Databases
