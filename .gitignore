@@ -1,0 +1,91 @@
+
+AGENTS.md
+PLAN.md
+TASKS.md
+DATASET_CONTRACT.md
+PRD.md
+docs/PRD.md
+CLAUDE.md
+CLAUDE_*.md
+COPILOT.md
+GEMINI.md
+PROMPT.md
+PROMPTS.md
+TODO.md
+SCRATCH.md
+.cursorrules
+.cursor/
+.windsurfrules
+.agent/
+.ai/
+
+# ==========================================
+# Datasets, Videos & Weights (Project Policy)
+# ==========================================
+pothole_video.zip
+pothole_video/
+*.zip
+*.tar
+*.tar.gz
+*.mp4
+*.avi
+*.mov
+*.mkv
+*.pt
+*.pth
+*.onnx
+*.engine
+weights/
+runs/
+datasets/
+data/
+
+# ==========================================
+# Local Storage, Uploads & Databases
+# ==========================================
+storage/
+uploads/
+evidence/
+*.sqlite
+*.sqlite3
+*.db
+
+# ==========================================
+# Python & Virtual Environments
+# ==========================================
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+env/
+*.egg-info/
+dist/
+build/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# ==========================================
+# Secrets & Environment Variables
+# ==========================================
+.env
+.env.*
+!.env.example
+
+# ==========================================
+# OS & Editor Artifacts
+# ==========================================
+.DS_Store
+.DS_Store?
+._*
+__MACOSX/
+Thumbs.db
+ehthumbs.db
+desktop.ini
+.vscode/
+.idea/
+*.swp
+*.swo
